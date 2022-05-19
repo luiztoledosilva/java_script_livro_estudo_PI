@@ -180,7 +180,7 @@ nome = "John";
 nascimento = 1978;
 verificarIdade(nome, nascimento);
 
-*/
+
 // Declaração (Statement)
 function minhaFuncao(param1) {
     console.log("Executa uma ação");
@@ -199,3 +199,47 @@ console.log(minhaOutraFuncao);
 // Uma soma é uma expressão
 var soma = 5 + 7;
 console.log("Valor armazenado na variável 'soma': " + soma);
+
+var arrJogadores = ['Ricardo', 'Monica', 'Leonardo'];
+var arrAnoNascimento = new Array(1998, 1975, 1991);
+var arrPontos = [45, 117, 78];
+arrPontos[1] = 71;
+console.log(arrJogadores);
+console.log(arrJogadores[1] + ' tem ' + arrPontos[1] + ' pontos.');
+
+///
+
+// new Array(nome jogador, ano nascimento, pontos)
+var arrRicardo = new Array('Ricardo', 1998, 45);
+var arrMonica = new Array('Monica', 1975, 71);
+var arrLeonardo = new Array('Leonardo', 1991, 78);
+var arrJogadores = new Array(arrRicardo, arrMonica, arrLeonardo);
+console.log(arrJogadores);
+
+/
+
+var arrPrato = new Array('Arroz', 'Tomate', 'Alface');
+arrPrato.push('Feijão');
+console.log(arrPrato);
+
+*/
+//var arrEmenta = new Array('Matemática', 'Artes', 'Francês');
+//arrEmenta.unshift('Português');
+//console.log(arrEmenta);
+
+//var arrEmenta = new Array('Matemática', 'Artes', 'Francês');
+//arrEmenta.unshift('Português');
+//arrEmenta.pop();
+//console.log(arrEmenta);
+
+//var arrMedicos = new Array('Dr. Barcelos', 'Dra. Fernanda');
+//arrMedicos.shift();
+//console.log(arrMedicos);
+
+
+var arrPrato = new Array('Arroz', 'Tomate', 'Alface');
+arrPrato.push('Feijão');
+if (arrPrato.indexOf('Arroz') !== -1) {
+    arrPrato.shift();
+}
+console.log(arrPrato);
