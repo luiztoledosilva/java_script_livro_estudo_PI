@@ -161,7 +161,6 @@ nascimento = 1978;
 var texto = verificarIdade(nome, nascimento);
 console.log(texto);
 
-*/
 function verificarIdade(nomePessoa, anoDeNascimento) {
     var idade = 2018 - anoDeNascimento;
     if (idade >= 18) {
@@ -180,3 +179,23 @@ verificarIdade("Cassiano", 1988);
 nome = "John";
 nascimento = 1978;
 verificarIdade(nome, nascimento);
+
+*/
+// Declaração (Statement)
+function minhaFuncao(param1) {
+    console.log("Executa uma ação");
+}
+if (1 !== 2) {
+    console.log("Um IF é uma declaração");
+}
+console.log(minhaFuncao);
+
+// Expressão (Expression)
+var minhaOutraFuncao = function(param1) {
+    console.log("Executa outra ação");
+}
+console.log(minhaOutraFuncao);
+
+// Uma soma é uma expressão
+var soma = 5 + 7;
+console.log("Valor armazenado na variável 'soma': " + soma);
