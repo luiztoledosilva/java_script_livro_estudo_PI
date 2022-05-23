@@ -321,7 +321,7 @@ while (nomePesquisado == null && i < nomes.length) {
 }
 console.log('Nome encontrado ' + nomePesquisado);
 
-*/
+
 
 var animaisMarinhos = ['peixe', 'baleia', 'golfinho', 'tubarão', 'lula'];
 for (var i = 0; i < animaisMarinhos.length; i++) {
@@ -332,3 +332,55 @@ for (var i = 0; i < animaisMarinhos.length; i++) {
         console.log('Procurar animal marinho.');
     }
 }
+
+
+
+
+var flores = ['rosa', 'azul', 'amarelo', 'rosa', 'amarelo', 'vermelho'];
+var i = 0;
+var numeroDeFlores = 0;
+for (var i = 0; i < flores.length; i++) {
+    if (flores[i] == 'amarelo') {
+        continue;
+    }
+    numeroDeFlores++;
+}
+console.log('Numero de flores: ' + numeroDeFlores);
+
+//script.js
+
+
+
+exibirTexto();
+
+function exibirTexto() {
+    console.log("Fase de execução, declaração de função");
+}
+
+exibirTexto();
+
+// exibirOutroTexto();
+
+var exibirOutroTexto = function() {
+    console.log("Fase de execução, expressão de função");
+};
+
+exibirOutroTexto();
+
+*/
+
+//var primeiraVariavel = "Sou um valor inicial";
+
+//console.log(window.primeiraVariavel);
+
+var carro = {
+    nome: 'Fusca',
+    marca: 'VW',
+    mostrarDados: function(cor, ano) {
+        console.log(this.nome, ano, this.marca, cor);
+    }
+}
+
+carro.mostrarDados('Azul', 1970);
+
+//continuacao pagina 63 do livro
