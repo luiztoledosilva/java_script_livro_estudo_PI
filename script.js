@@ -222,7 +222,7 @@ var arrPrato = new Array('Arroz', 'Tomate', 'Alface');
 arrPrato.push('Feijão');
 console.log(arrPrato);
 
-*/
+
 //var arrEmenta = new Array('Matemática', 'Artes', 'Francês');
 //arrEmenta.unshift('Português');
 //console.log(arrEmenta);
@@ -236,10 +236,99 @@ console.log(arrPrato);
 //arrMedicos.shift();
 //console.log(arrMedicos);
 
-
 var arrPrato = new Array('Arroz', 'Tomate', 'Alface');
 arrPrato.push('Feijão');
 if (arrPrato.indexOf('Arroz') !== -1) {
     arrPrato.shift();
 }
 console.log(arrPrato);
+
+
+
+///script.js
+var objetoCarro = {
+    modelo: '147',
+    numeroVidros: 4,
+    marca: 'Fiat',
+    numeroPortas: 2
+}
+
+var objetoCasa = new Object();
+objetoCasa.numeroComodos = 5;
+objetoCasa.valorImovel = 523000.320;
+objetoCasa['aluguel'] = false;
+objetoCasa['venda'] = true;
+//3
+objetoCarro.numeroPortas = 4;
+var umIdentificadorDaCasa = 'valorImovel';
+
+console.log(objetoCarro);
+console.log(objetoCarro.modelo);
+console.log(objetoCasa['numeroComodos']);
+console.log(objetoCasa[umIdentificadorDaCasa]);
+
+
+
+var carro = {
+    extras: ['ar-condicionado', 'freios abs', 'som'],
+    velocidade: 0,
+    faroisLigados: false,
+    ligarFarios: function() {
+        this.faroisLigados = true;
+    },
+    acelerar: function(velocidade) {
+        this.velocidade += velocidade;
+    },
+    freiar: function() {
+        this.velocidade = 0;
+    }
+}
+carro.ligarFarios();
+console.log('Farois ligados: ' + carro.faroisLigados);
+carro.acelerar(50);
+console.log('Velocidade: ' + carro.velocidade);
+carro.freiar();
+console.log('Velocidade: ' + carro.velocidade);
+
+
+
+//script.js
+// for (contador; condição; incremento) {
+//for (var i = 0; i < 10; i++) {
+//  console.log(i);
+//}
+
+///script.js
+var nomes = ['João', 'Maria', 'Aurora', 'Branca', 'Melevola'];
+
+for (var i = nomes.length - 1; i >= 0; i--) {
+    console.log(nomes[i]);
+}
+
+
+
+//script.js
+var nomes = ['Soluço', 'Astrid', 'Melequento', 'Perna de peixe', 'Bocão'];
+var nomePesquisado = null;
+var i = 0;
+while (nomePesquisado == null && i < nomes.length) {
+    if (nomes[i] == 'Melequento') {
+        nomePesquisado = nomes[i];
+    } else {
+        console.log(nomes[i] + ' não é o nome pesquisado');
+    }
+    i++;
+}
+console.log('Nome encontrado ' + nomePesquisado);
+
+*/
+
+var animaisMarinhos = ['peixe', 'baleia', 'golfinho', 'tubarão', 'lula'];
+for (var i = 0; i < animaisMarinhos.length; i++) {
+    if (animaisMarinhos[i] == 'tubarão') {
+        console.log(animaisMarinhos[i] + ' encontrado.');
+        break;
+    } else {
+        console.log('Procurar animal marinho.');
+    }
+}
